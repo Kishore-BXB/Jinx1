@@ -1,6 +1,4 @@
-/* ======================================================
-   GLOBAL THEME AND BASE STYLES
-====================================================== */
+
 :root {
     --primary-color: #6c63ff; /* Purple/Violet */
     --secondary-color: #3f3d56; /* Dark text */
@@ -22,10 +20,6 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
-/* ======================================================
-   TYPOGRAPHY
-====================================================== */
 h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
 h2 { font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem; }
 h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
@@ -175,16 +169,294 @@ nav ul li a.active::after {
         opacity: 0;
     }
 }
+.content-section {
+    padding: 60px 0; /* Use the existing section-padding class or define here */
+    background-color: #f8f9fa; /* Light background for contrast */
+}
 
-/* --- HERO CONTENT --- */
+/* Base style for the main content area */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    color: #343a40;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* The 'hidden' class can be managed by JavaScript, but ensure it's hidden initially */
+.hidden {
+    display: none;
+}
+
+---
+
+/* ========================
+   VIDEO LIST STYLING
+   ======================== */
+.video-list {
+    /* Use CSS Grid for the list itself if you want a multi-column layout on large screens,
+       or simply rely on stacking, which is default for block elements.
+       Let's stick to simple stacking for maximum compatibility, making the items full width. */
+}
+
+.video-item {
+    /* Main container for a single video entry */
+    display: flex; /* Use flexbox to align the info and status side-by-side */
+    justify-content: space-between; /* Push info to left, status to right */
+    align-items: center; /* Vertically center all content */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-left: 5px solid transparent; /* Placeholder for status color */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ========================
+   VIDEO INFO STYLING (Left Side)
+   ======================== */
+.video-info {
+    display: flex; /* Align the icon and the text block side-by-side */
+    align-items: center;
+    flex-grow: 1; /* Allows the info section to take up available space */
+}
+
+.video-info i {
+    font-size: 24px;
+    color: #007bff; /* Icon color */
+    margin-right: 15px;
+}
+
+.file-name {
+    font-weight: 600;
+    color: #343a40;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.file-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ========================
+   VIDEO STATUS STYLING (Right Side)
+   ======================== */
+.video-status {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the tag and the confidence score */
+    min-width: 250px; /* Ensure space for the status elements */
+    justify-content: flex-end; /* Align elements to the right */
+}
+
+.status-tag {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.status-tag i {
+    margin-right: 5px;
+}
+
+.confidence-score {
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+/* AUTHENTIC status */
+.video-item.authentic {
+    border-left-color: #28a745; /* Green border for Authentic */
+}
+.authentic-tag {
+    background-color: #e6f5e9; /* Light green background */
+    color: #28a745; /* Darker green text */
+}
+
+/* DEEPFAKE status */
+.video-item.deepfake {
+    border-left-color: #dc3545; /* Red border for Deepfake */
+}
+.deepfake-tag {
+    background-color: #fbeae9; /* Light red background */
+    color: #dc3545; /* Darker red text */
+}
+
+/* PROCESSING status */
+.video-item.processing {
+    border-left-color: #ffc107; /* Yellow border for Processing */
+}
+.processing-tag {
+    background-color: #fff9e6; /* Light yellow background */
+    color: #ffc107; /* Darker yellow text */
+}
+.fa-spin {
+    animation: fa-spin 1s infinite linear; /* Standard Font Awesome spinning animation */
+}
+
+/* Simple keyframe for spinning icon if not using Font Awesome's CDN */
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* ========================
+   SECTION & CONTAINER STYLING
+   ======================== */
+.about-section {
+    padding: 80px 0; /* Generous vertical spacing */
+    background-color: #f8f9fa; /* Light background for 'About' sections */
+    color: #343a40; /* Standard dark text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Base heading styles */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #007bff; /* Primary brand color */
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mission-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 60px;
+    border-left: 5px solid #007bff; 
+}
+.mission-card h3 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; 
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: #007bff;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    display: block; 
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.cta-banner {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.cta-banner h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cta-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.cta-btn:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-2px);
+}
 .hero-content {
     max-width: 800px;
     margin-bottom: 5rem;
     position: relative;
     z-index: 1;
 }
-
-/* Upload Box */
 .upload-box {
     background: #fff;
     border: 2px dashed var(--primary-color);
@@ -211,23 +483,146 @@ nav ul li a.active::after {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
-
-/* ======================================================
-   HOW IT WORKS SECTION
-====================================================== */
 .how-it-works {
     text-align: center;
     position: relative;
     z-index: 1;
 }
+detectify-footer {
+    /* Background and Padding */
+    background-color: #212529; /* Dark footer background */
+    color: #ffffff;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
 
+.footer-container {
+    /* Centering and Responsive Padding */
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* Flexbox Layout for Desktop/Mobile Responsiveness */
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Desktop Layout (768px and up) */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Align horizontally on desktop */
+        text-align: left;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+/* =======================================
+   Branding and Copyright
+   ======================================= */
+.footer-brand {
+    margin-bottom: 1rem; /* Space below brand on mobile */
+}
+
+@media (min-width: 768px) {
+    .footer-brand {
+        margin-bottom: 0; /* Remove space on desktop */
+    }
+}
+
+.brand-name {
+    /* Text style: Large, Bold, Indigo/Primary Color */
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #6474ed; /* A nice indigo color */
+}
+
+.copyright-text {
+    /* Text style: Small, Gray color */
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-top: 0.25rem;
+}
+/* =======================================
+   Base Styling
+   ======================================= */
+.detectify-footer {
+    /* Background and Padding */
+    background-color: #212529; /* Dark footer background */
+    color: #ffffff;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    /* Centering and Responsive Padding */
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* Flexbox Layout for Desktop/Mobile Responsiveness */
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Desktop Layout (768px and up) */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Align horizontally on desktop */
+        text-align: left;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+/* =======================================
+   Branding and Copyright
+   ======================================= */
+.footer-brand {
+    margin-bottom: 1rem; /* Space below brand on mobile */
+}
+
+@media (min-width: 768px) {
+    .footer-brand {
+        margin-bottom: 0; /* Remove space on desktop */
+    }
+}
+
+.brand-name {
+    /* Text style: Large, Bold, Indigo/Primary Color */
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #6474ed; /* A nice indigo color */
+}
+
+.copyright-text {
+    /* Text style: Small, Gray color */
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-top: 0.25rem;
+}
 .steps-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 5rem;
 }
-
 .step-card {
     background: #fff;
     border-radius: 12px;
@@ -243,14 +638,9 @@ nav ul li a.active::after {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-color);
 }
-
-/* ======================================================
-   CONTACT SECTION
-====================================================== */
 .contact-section {
     background-color: #fff;
 }
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -258,7 +648,6 @@ nav ul li a.active::after {
     max-width: 1000px;
     text-align: left;
 }
-
 .contact-info-panel {
     background: var(--light-bg);
     padding: 2rem;
@@ -268,13 +657,11 @@ nav ul li a.active::after {
     gap: 2rem;
     align-self: flex-start;
 }
-
 .contact-detail {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-
 .contact-form input,
 .contact-form textarea {
     padding: 1rem;
@@ -284,73 +671,31 @@ nav ul li a.active::after {
     font-size: 1rem;
     background-color: var(--light-bg);
 }
-
-/* ======================================================
-   FOOTER SECTION
-====================================================== */
-.main-footer {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding-top: 4rem;
-    font-size: 0.95rem;
+.contact-formm{
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; 
 }
-
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 2.5rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1.5rem 3rem;
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 15px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-
-.footer-about h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #fff;
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
 }
-
-.footer-links ul, .footer-contact ul {
-    list-style: none;
-    padding: 0;
 }
-
-.footer-links ul li a {
-    text-decoration: none;
-    color: #ccc;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: var(--primary-color);
-}
-
-.footer-social .social-icons a {
-    display: inline-block;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    margin-right: 0.5rem;
-    padding: 0.5rem 0.7rem;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.footer-social .social-icons a:hover {
-    background: var(--primary-color);
-    transform: translateY(-3px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #2e2c44;
-    font-size: 0.9rem;
-    color: #bbb;
-}
-
-/* ======================================================
-   RESPONSIVE DESIGN
-====================================================== */
 @media (max-width: 992px) {
     .steps-container {
         grid-template-columns: 1fr;
@@ -364,7 +709,6 @@ nav ul li a.active::after {
         order: 2;
     }
 }
-
 @media (max-width: 768px) {
     h1 { font-size: 2.2rem; }
 
