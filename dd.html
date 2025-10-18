@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectify - AI Deepfake Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="dd.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Detectify</a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li> 
+                    <li><a href="#content" class="nav-link">Content</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#home" class="btn btn-primary try-now">Try Now →</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section section-padding">
+            <div class="container hero-content">
+                <h1>Detect Deepfakes with <span class="highlight">AI Precision</span></h1>
+                <p>Upload your videos and let our advanced AI analyze authenticity in real-time. Protect digital truth with cutting-edge technology.</p>
+                
+                <div class="upload-box">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <p class="drop-text">Drop your video here</p>
+                    <p class="support-text">or click to browse • Supports MP4, MOV, AVI</p>
+                    <input type="file" id="video-upload" accept=".mp4,.mov,.avi" hidden>
+                </div>
+            </div>
+
+            <div id="how-it-works" class="container how-it-works">
+                <h2>How It Works</h2>
+                <p class="subtitle">Three simple steps to verify your content.</p>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3>Upload Video</h3>
+                        <p>Drag and drop or select your video file for instant processing.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3>AI Analysis</h3>
+                        <p>Our neural networks scan every frame for manipulation patterns.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3>Get Results</h3>
+                        <p>Receive detailed report with confidence score and visualizations.</p>
+                    </div>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <p class="stat-number">99.2%</p>
+                        <p class="stat-label">Accuracy Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="stat-number">10M+</p>
+                        <p class="stat-label">Videos Analyzed</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="stat-number"><2min</p>
+                        <p class="stat-label">Average Speed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about-section section-padding hidden">
+            <div class="container">
+                <h2>About Detectify</h2>
+                <p class="subtitle">We're on a mission to combat synthetic media and protect digital authenticity through cutting-edge artificial intelligence.</p>
+
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>In an era where synthetic media can be weaponized to spread misinformation, Detectify stands as a guardian of digital truth. Our advanced AI technology empowers individuals, journalists, and organizations to verify video authenticity with confidence, ensuring that what you see is really what happened.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-brain feature-icon"></i>
+                        <h3>Neural Networks</h3>
+                        <p>Advanced deep learning models trained on millions of authentic and synthetic videos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bolt feature-icon"></i>
+                        <h3>Real-Time Analysis</h3>
+                        <p>Process and analyze videos at unprecedented speeds with GPU acceleration.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-lock feature-icon"></i>
+                        <h3>Privacy First</h3>
+                        <p>End-to-end encryption ensures your data never leaves your control.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-bar feature-icon"></i>
+                        <h3>Detailed Reports</h3>
+                        <p>Comprehensive analysis with frame-by-frame breakdowns and confidence scores.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-banner">
+                <div class="container">
+                    <h3>Join the Fight for Digital Truth</h3>
+                    <p>Start verifying videos today with our platform</p>
+                    <a href="#home" class="btn btn-primary cta-btn">Try Detection Now →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="content" class="content-section section-padding hidden">
+            <div class="container">
+                <h2>Your Content</h2>
+                <p class="subtitle">Manage and review your analyzed videos</p>
+
+                <div class="video-list">
+                    <div class="video-item authentic">
+                        <div class="video-info">
+                            <i class="far fa-file-video"></i>
+                            <div>
+                                <p class="file-name">sample_video_1.mp4</p>
+                                <p class="file-meta">2025-01-15 • 124 MB</p>
+                            </div>
+                        </div>
+                        <div class="video-status">
+                            <span class="status-tag authentic-tag"><i class="fas fa-check"></i> Authentic</span>
+                            <span class="confidence-score">95% confidence</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item deepfake">
+                        <div class="video-info">
+                            <i class="far fa-file-video"></i>
+                            <div>
+                                <p class="file-name">interview_clip.mov</p>
+                                <p class="file-meta">2025-01-14 • 88 MB</p>
+                            </div>
+                        </div>
+                        <div class="video-status">
+                            <span class="status-tag deepfake-tag"><i class="fas fa-exclamation-triangle"></i> Deepfake</span>
+                            <span class="confidence-score">87% confidence</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item processing">
+                        <div class="video-info">
+                            <i class="far fa-file-video"></i>
+                            <div>
+                                <p class="file-name">news_segment.mp4</p>
+                                <p class="file-meta">2025-01-15 • 256 MB</p>
+                            </div>
+                        </div>
+                        <div class="video-status">
+                            <span class="status-tag processing-tag"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding hidden">
+            <div class="container contact-grid">
+                <h2>Get in Touch</h2>
+                <p class="subtitle">Have questions? We'd love to hear from you</p>
+
+                <div class="contact-info-panel">
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope icon"></i>
+                        <div>
+                            <p class="detail-label">Email</p>
+                            <p class="detail-value">hello@detectify.ai</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone icon"></i>
+                        <div>
+                            <p class="detail-label">Phone</p>
+                            <p class="detail-value">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt icon"></i>
+                        <div>
+                            <p class="detail-label">Office</p>
+                            <p class="detail-value">San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Message" rows="6" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="dd.js"></script>
+</body>
+</html>
