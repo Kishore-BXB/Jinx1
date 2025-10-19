@@ -119,26 +119,47 @@ h2 { font-size: 2.5em; text-align: center; }
     color: var(--secondary-color); /* Changes to secondary blue on hover */
 }
 
+
+/* Reset list styling and layout */
 nav ul {
-/* ... existing styles ... */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-nav ul li {
-/* ... existing styles ... */
-}
-
+/* Base link styles */
 .nav-link {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 400;
-    /* Kept existing color transition for consistency */
-    transition: color 0.3s ease; 
+  display: inline-block;        /* so padding & background behave predictably */
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.12s ease;
+  outline: none;                /* keep but add focus style below */
 }
 
-.nav-link:hover {
-    color: var(--primary-color);
+/* Hover + focus state (only one declaration — no duplicates) */
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);  /* subtle lift */
 }
 
+/* Keyboard-accessible focus style (visible ring) */
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(108,99,255,0.18);
+}
+
+/* Small responsive adjustment */
+@media (max-width: 480px) {
+  nav ul { gap: 10px; }
+  .nav-link { padding: 8px 6px; }
+}
 .try-now {
     background-color: var(--primary-color);
     color: var(--background-color);
