@@ -1,0 +1,613 @@
+/* CSS Variables for Dark Theme */
+:root {
+    --primary-color: #4CAF50; /* A vibrant green for action/emphasis */
+    --secondary-color: #2196F3; /* A nice blue for secondary actions */
+    --background-color: #121212; /* Deep dark background */
+    --surface-color: #1E1E1E; /* Slightly lighter surface for cards/sections */
+    --text-color: #E0E0E0; /* Light text for contrast */
+    --text-color-secondary: #AAAAAA; /* Grayed out text */
+    --border-color: #333333; /* Darker borders */
+    --hover-bg: #282828;
+    --success-bg: #388E3C;
+    --success-text: #E8F5E9;
+    --deepfake-bg: #D32F2F;
+    --deepfake-text: #FFEBEE;
+    --processing-bg: #FBC02D;
+    --processing-text: #212121;
+}
+
+/* General Body and Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; text-align: center; }
+.subtitle {
+    text-align: center;
+    color: var(--text-color-secondary);
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+.highlight {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.btn-primary:hover {
+    background-color: #388E3C;
+    color: white;
+}
+
+.clear-btn {
+    background-color: #555555;
+    color: var(--text-color);
+}
+
+.clear-btn:hover {
+    background-color: #777777;
+}
+
+/* Header and Navigation */
+/* dd.css modifications */
+
+/* Header and Navigation */
+.main-header {
+    background-color: var(--surface-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Added transition for smooth background changes if scrolled or altered */
+    transition: background-color 0.3s ease; 
+}
+
+/* ... existing styles ... */
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* Added transition to logo color */
+    transition: color 0.3s ease; 
+}
+
+.logo:hover {
+    color: var(--secondary-color); /* Changes to secondary blue on hover */
+}
+
+nav ul {
+/* ... existing styles ... */
+}
+
+nav ul li {
+/* ... existing styles ... */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    /* Kept existing color transition for consistency */
+    transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.try-now {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    /* Kept existing background-color transition for the button */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-primary:hover {
+    background-color: #388E3C; /* Darker primary color on hover */
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.try-now {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Hero Section (Home) */
+.hero-section {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    margin-top: 0;
+}
+
+/* Upload Box */
+.upload-box {
+    margin: 40px auto;
+    padding: 60px 40px;
+    border: 3px dashed var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.upload-box:hover {
+    border-color: var(--primary-color);
+    background-color: var(--hover-bg);
+}
+.output{
+    margin: 40px auto;
+    padding: 60px 40px;
+    border: 3px dashed var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.output:hover {
+    border-color: var(--primary-color);
+    background-color: var(--hover-bg);
+}
+
+.upload-icon {
+    font-size: 4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.drop-text {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.support-text {
+    color: var(--text-color-secondary);
+    font-size: 0.9em;
+}
+
+/* How It Works */
+.how-it-works {
+    padding-top: 50px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    flex: 1;
+    border: 1px solid var(--border-color);
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Output Field Styles (New) */
+.output-field {
+    margin: 25px auto 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    min-height: 50px;
+    text-align: left;
+    transition: all 0.3s ease;
+    max-width: 600px; /* Constrain width for cleaner look */
+}
+.output-para {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+.output-message {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    height: 10px;
+    background-color: var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    transition: width 0.4s ease;
+}
+
+/* Output Status Colors */
+.output-field.success {
+    border-color: var(--primary-color);
+    background-color: #1a381a; /* Dark green */
+}
+
+.output-field.error {
+    border-color: var(--deepfake-bg);
+    background-color: #381a1a; /* Dark red */
+}
+
+.output-field.processing {
+    border-color: var(--processing-bg);
+    background-color: #38311a; /* Dark yellow */
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.mission-card {
+    background-color: var(--hover-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.mission-card h3 {
+    color: var(--primary-color);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: var(--background-color);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.feature-icon {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.cta-banner {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-banner h3 {
+    color: var(--background-color);
+}
+
+.cta-banner p {
+    color: var(--background-color);
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Content Section */
+.header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.video-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.video-item.authentic { border-left-color: var(--primary-color); }
+.video-item.deepfake { border-left-color: var(--deepfake-bg); }
+.video-item.processing { border-left-color: var(--processing-bg); }
+
+
+.video-info {
+    display: flex;
+    align-items: center;
+}
+
+.video-info i {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+.file-name {
+    font-weight: 600;
+    margin: 0;
+}
+
+.file-meta {
+    color: var(--text-color-secondary);
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.video-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-tag {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-right: 20px;
+}
+
+.authentic-tag {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+.deepfake-tag {
+    background-color: var(--deepfake-bg);
+    color: var(--deepfake-text);
+}
+
+.processing-tag {
+    background-color: var(--processing-bg);
+    color: var(--processing-text);
+}
+
+.confidence-score {
+    color: var(--text-color-secondary);
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--surface-color);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-grid h2, .contact-grid .subtitle {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.contact-grid .subtitle {
+    margin-bottom: 40px;
+}
+
+.contact-formm {
+    grid-column: 2 / 3;
+}
+.contact-info-panel {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+}
+
+.contact-detail .icon {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.detail-label {
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    margin: 0;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--hover-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .steps-container {
+        flex-direction: column;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-formm, .contact-info-panel {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    .nav-container nav { display: none; }
+    .nav-container { justify-content: space-around; }
+    .video-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .video-status { margin-top: 5px; }
+    .confidence-score { margin-left: 0; }
+}
